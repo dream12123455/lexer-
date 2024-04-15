@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexer</title>
+    <link rel="stylesheet" href="./css/index-style.css">
+</head>
+<body>
+
+    <header>
+        
+        <h1>Lexer <br> con expresiones regulares v2</h1>
+    </header>
+    <audio src="./audio/pong.wav" id="miSonido">
+        
+    </audio>
+    
+    <section>
+        <div class="card">
+            <div class="tools">
+              <div class="circle">
+                <span class="red box"></span>
+              </div>
+              <div class="circle">
+                <span class="yellow box"></span>
+              </div>
+              <div class="circle">
+                <span class="green box"></span>
+              </div>
+            </div>
+            <div class="card__content">
+                <div class="titulo">Reglas de uso</div>
+            </div>
+            <pre>
+                cada palabra debe estar separada 
+por un espacio
+
+ejemplos de uso:
+
+para entero i = 0 ; i <= 100 ; i ++ finC
+
+salida esperada :
+
+[LEXEMA: para] ---- [TIPO: Ciclo inicio-fin]
+[LEXEMA: entero] ---- [TIPO: Declaracion]
+[LEXEMA: i] ---- [TIPO: Nombre variable]
+[LEXEMA: =] ---- [TIPO: Asignacion]
+[LEXEMA: 0] ---- [TIPO: valor numerico]
+[LEXEMA: ;] ---- [TIPO: Separador de linea]
+[LEXEMA: <=] ---- [TIPO: Operador Logico]
+[LEXEMA: 100] ---- [TIPO: valor numerico]
+[LEXEMA: ++] ---- [TIPO: Operacion Aritmetica]
+[LEXEMA: fin] ---- [TIPO: Nombre variable]
+
+            </pre>
+          </div>
+
+        <div class="card" id="busqueda">
+            <div class="tools">
+              <div class="circle">
+                <span class="red box"></span>
+              </div>
+              <div class="circle">
+                <span class="yellow box"></span>
+              </div>
+              <div class="circle">
+                <span class="green box"></span>
+              </div>
+            </div>
+            <div class="card__content">
+                <div class="titulo">Validador</div>
+                <input type="text" id="input" placeholder="Ingrese la expresion">
+                    <a href="#divResult"><button type="button" id="buttonV" onclick="comprobarDeclaracion()">Validar</button></a> 
+                <div class="terminal-loader">
+                    <div class="terminal-header">
+                      <div class="terminal-title">Status</div>
+                      <div class="terminal-controls">
+                        <div class="control close"></div>
+                        <div class="control minimize"></div>
+                        <div class="control maximize"></div>
+                      </div>
+                    </div>
+                    <div class="text">code...<></div>
+                  </div>
+                  
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="tools">
+              <div class="circle">
+                <span class="red box"></span>
+              </div>
+              <div class="circle">
+                <span class="yellow box"></span>
+              </div>
+              <div class="circle">
+                <span class="green box"></span>
+              </div>
+            </div>
+            <div class="card__content">
+                <div class="titulo">Resultado</div>
+                <div id="divResult"></div>
+            </div>
+          </div>
+    </section>
+   <footer>
+     <pre>
+        creado por:
+Camilo Andres Ramos Cotes,
+Brayan de Jesus Duran Liñan
+Lauren Dayanna Gonzalez Cardenas
+Daniel Eduardo Bocachica Castillo
+     </pre>
+   </footer>
+
+    
+
+   
+
+    <script src="./js/ComprobrarDeclaracion.js"></script>
+
+</body>
+</html>
